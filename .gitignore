@@ -3,3 +3,4 @@ __pycache__
 statistic
 db.sqlite3
 .DS_Store
+myvenv
