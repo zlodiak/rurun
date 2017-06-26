@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>RuRun</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+
+    <body>
+        <div class="action-area">
+            <p>Date begin: <input type="text" id="datepickerBegin"></p>
+            <p>Date end: <input type="text" id="datepickerEnd"></p>
+            <p><button class="btn btn-submit" onclick="displayStatistic()">Выбрать</button></p>
+        </div>
+
+        <div class="statistic-area">
+            <div class="statistic-table-wrap" id="statisticTableWrap"></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="{% static 'js/scripts.js' %}"></script>        
+    </body>
+</html>
