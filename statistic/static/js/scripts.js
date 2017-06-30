@@ -87,6 +87,8 @@ function displayStatistic() {
 
     $.ajax({url: "http://127.0.0.1:8000/days/" + dateBeginUnix + "/" + dateEndUnix, success: function(result){
 		statistic = JSON.parse(result);	
+		console.log(123);
+		alert(statistic);
 		var table = constructTable(statistic);
 		$('#statisticTableWrap').append(table);
 		

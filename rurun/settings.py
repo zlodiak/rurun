@@ -25,7 +25,7 @@ SECRET_KEY = '%q95&@o^2y+_c)1ijn@9^pbt7clk_66f+bi5apco0+!uk08!5+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['zlodiak.pythonanywhere.com']
+ALLOWED_HOSTS = ['zlodiak.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'statistic',
+    #'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -48,7 +49,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+
+# CORS_ORIGIN_WHITELIST = (
+#     '127.0.0.1:8000'
+# )
 
 ROOT_URLCONF = 'rurun.urls'
 
