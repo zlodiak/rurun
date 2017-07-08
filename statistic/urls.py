@@ -5,4 +5,5 @@ urlpatterns = [
     url(r'^$', views.days_spa, name='days_spa'),
     url(r'^days$', views.days_index, name='days_index'),
     url(r'^days/(?P<timestamp_begin>[0-9]+)/(?P<timestamp_end>[0-9]+)$', views.days_read, name='days_read'),
+    url(r'^articles$', views.articles_index, name='articles_index'),
 ]

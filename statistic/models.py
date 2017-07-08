@@ -12,3 +12,14 @@ class Day(models.Model):
 
     def __str__(self):
         return self.created_date.strftime('%Y-%m-%d %H:%M')
+
+
+class Article(models.Model):
+    author = models.ForeignKey('auth.User')
+    title = models.CharField(max_length=200)
+    text = models.TextField()
+    created_date = models.DateTimeField(default=timezone.now)
+    published_date = models.DateTimeField(blank=True, null=True)
+
+    def __str__(self):
+        return self.title     
