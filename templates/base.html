@@ -1,4 +1,5 @@
 {% load staticfiles %}
+
 <html>
     <head>
         <title>RuRun</title>
@@ -15,7 +16,7 @@
             {% endif %}
         </div>
 
-        {% block login %}{% endblock %}
+        {% block 'login' %}{% endblock %}
 
         <div class="action-area">
             <p>Date begin: <input type="text" id="datepickerBegin"></p>

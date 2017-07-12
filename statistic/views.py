@@ -18,7 +18,7 @@ def days_read(request, timestamp_begin, timestamp_end):
 	return JsonResponse(days_serialized, safe=False) 	
 
 def days_spa(request):
-    return render(request, 'statistic/base.html', {})	
+    return render(request, 'base.html', {})	
 
 def articles_index(request):
     articles = Article.objects.all()   
