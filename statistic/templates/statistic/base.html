@@ -7,6 +7,16 @@
     </head>
 
     <body>
+        <div class="header">
+            {% if username %}
+                <a href="/auth/logout/">выйти ()</a>
+            {% else %}
+                <a href="/auth/login/">войти</a>
+            {% endif %}
+        </div>
+
+        {% block login %}{% endblock %}
+
         <div class="action-area">
             <p>Date begin: <input type="text" id="datepickerBegin"></p>
             <p>Date end: <input type="text" id="datepickerEnd"></p>

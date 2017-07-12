@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'statistic',
-    #'corsheaders',
+    'login',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +65,9 @@ ROOT_URLCONF = 'rurun.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            '/home/django/login/templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

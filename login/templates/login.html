@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block 'login' %}
+<form action="/auth/login" method="POST">
+	{% csrf_token %}
+	<input type="text" name="username" id="username">
+	<br>
+	<input type="password" name="password" id="password">
+	<br>
+	<input type="button" name="submit" value="войти">
+	<br>
+	{% login_error %}
+		<div class="login-error">{% login_error %}</div>
+	{% endif %}
+</form>
+{% endblock %}
