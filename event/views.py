@@ -3,12 +3,12 @@ from django.http import JsonResponse
 from django.core import serializers
 import datetime
 
-from .models import Date
+from .models import Date, Event
 
-# def event_index(request):
-#     events = Event.objects.all()   
-#     events_serialized = serializers.serialize('json', events)
-#     return JsonResponse(events_serialized, safe=False) 
+def events_index(request):
+    events = Event.objects.all()   
+    events_serialized = serializers.serialize('json', events)
+    return JsonResponse(events_serialized, safe=False) 
 
 def dates_index(request):
     dates = Date.objects.all()   

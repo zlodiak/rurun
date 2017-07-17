@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 class Day(models.Model):
     author = models.ForeignKey('auth.User')
     pulse_avg_bpm = models.IntegerField()
@@ -12,7 +13,6 @@ class Day(models.Model):
 
     def __str__(self):
         return self.created_date.strftime('%Y-%m-%d %H:%M')
-
 
 class Article(models.Model):
     author = models.ForeignKey('auth.User')
