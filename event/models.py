@@ -13,6 +13,7 @@ class Date(models.Model):
 
 class Event(models.Model):
 		date = models.ForeignKey(Date, on_delete=models.CASCADE)
+		day = models.CharField(max_length=20, default='0')
 		title = models.CharField(max_length=200)
 		text = models.TextField()
 		order = models.IntegerField(default=0)

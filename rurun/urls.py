@@ -5,5 +5,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^auth/', include('login.urls')),
     url(r'^event/', include('event.urls')),
+    url(r'^guestbook/', include('guestbook.urls')),
     url(r'', include('statistic.urls')),
 ]
