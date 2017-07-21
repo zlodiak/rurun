@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.utils import timezone
 from django.http import JsonResponse
+from django.core import serializers
 import json
 
 from .models import Message
@@ -19,3 +20,9 @@ def message_create(request):
 		data = json.dumps({ 'status': status , 'error_message': error_message })
 
 		return JsonResponse(data, safe=False)     		
+
+
+def messages_index(request):
+    messages = Message.objects.all()   
+    messages_serialized = serializers.serialize('json', messages)
+    return JsonResponse(messages_serialized, safe=False)     
